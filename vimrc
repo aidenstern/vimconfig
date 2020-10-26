@@ -40,7 +40,7 @@ set wrap
 set laststatus=2
 set ruler
 
-" Statusline shit
+" Statusline
 set noshowmode
 set wildmenu
 set wildmode=longest:full,full
@@ -49,9 +49,11 @@ set number
 set title
 set textwidth=80
 
-" Dunno what this does
+" History, Backup, Swap, Undo
 set history=1000
-set matchpairs+=<:>
+set undodir=~/.vim/.undo//
+set backupdir=~/.vim/.backup//
+set directory=~/.vim/.swp//
 
 " Syntax and Colorscheme
 colorscheme gruvbox
