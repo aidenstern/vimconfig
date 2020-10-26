@@ -3,6 +3,10 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'sheerun/vim-polyglot'
+Plug 'tpope/vim-surround'
+Plug 'preservim/tagbar'
+Plug 'tpope/vim-commentary'
 
 call plug#end()
 
@@ -13,6 +17,9 @@ let g:airline#extensions#tabline#left_alt_sep='|'
 let g:airline_powerline_fonts=1
 let g:airline_skip_empty_sections=1
 let g:airline_theme='gruvbox'
+
+nmap <F8> :TagbarToggle<CR>
+nmap <F9> :TagbarOpen fj<CR>
 
 " Formatting
 filetype plugin indent on

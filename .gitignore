@@ -1,0 +1,8 @@
+# plugin files
+pack/
+plugged/
+
+# swap, backup dirs
+swp/
+undo/
+backup/
