@@ -7,6 +7,8 @@ Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-surround'
 Plug 'preservim/tagbar'
 Plug 'tpope/vim-commentary'
+Plug 'mattn/emmet-vim'
+Plug 'lervag/vimtex'
 
 call plug#end()
 
@@ -21,15 +23,26 @@ let g:airline_theme='gruvbox'
 nmap <F8> :TagbarToggle<CR>
 nmap <F9> :TagbarOpen fj<CR>
 
+let g:tex_flavor='latex'
+let g:vimtex_view_method='zathura'
+let g:vimtex_quickfix_mode=0
+set concealallevel=1
+let g:text_conceal='abdmg'
+
 " Formatting
 filetype plugin indent on
+set encoding=utf-8
 set backspace=indent,eol,start
 set autoindent
 set expandtab
 set shiftround
 set shiftwidth=4
-set smarttab
+set softtabstop=4
 set tabstop=4
+set smarttab
+
+" Filetype Specific Formatting
+autocmd FileType vue setlocal tabstop=2 softtabstop=2 shiftwidth=2
 
 " Searching
 set hlsearch
